@@ -1,0 +1,12 @@
+.card{
+  float: left;
+    margin:20px;
+    margin-left:3%;
+    padding:5px;
+    box-shadow: 10px 10px 8px 10px #888888;
+    width: 250px;
+}
+
+.info{
+    width: 100px;
+}

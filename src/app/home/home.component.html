@@ -1,0 +1,15 @@
+<app-navbar></app-navbar>
+
+<h1 class="text-primary text-center">Welcome to Book Store</h1>
+<div class="card container" *ngFor="let i of book" style="width: 20rem;">
+
+    <div class="card-body ">
+        <b>Book Name :<h5 class="card-title"> <a [routerLink]="['/bookdetails',i.bookId]"> {{i.bookName}}</a></h5></b>
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"> <b>Authour :</b> {{i.author}}</li>
+        <li class="list-group-item">
+            <p class="info"><b>Price :</b> &#x20b9; {{i.price}}</p>
+        </li>
+    </ul>
+</div>

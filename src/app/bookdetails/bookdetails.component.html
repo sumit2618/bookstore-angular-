@@ -1,0 +1,46 @@
+<app-navbar></app-navbar>
+
+<div style="margin-top: 5%;" class=" container jumbotron  w-50">
+    <h3 class="text-center">Book Details</h3>
+    <div>
+
+        <table class="table table-bordered bg-light  ">
+            <tr>
+                <td>
+                    <div>
+                        <h5>Book Name : {{book.bookName}} </h5>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <h5>Author : {{book.author}} </h5>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div>
+                        <h5>Price : {{book.price}} </h5>
+                    </div>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <form [formGroup]="form" (ngSubmit)="register()">
+                        <input type="hidden" formControlName="bookId">
+                        <label> <b>Quantity of book : </b></label>
+
+                        <input class="form-control" type="number" placeholder="Enter Quantity of book" name="quantity" formControlName="quantity" required>
+                        <br>
+                        <button type="submit " class="btn btn-primary btn-lg btn-block ">Purchase</button>
+                        <button type="submit " [routerLink]="['/'] " class="btn btn-danger btn-lg btn-block ">Cancle</button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+</div>

@@ -1,0 +1,54 @@
+<app-navbar></app-navbar>
+
+<div style="margin-top: 5%;" class=" container jumbotron  w-50">
+    <h3 class="text-center">Purchase Book</h3>
+    <div>
+        <form [formGroup]="purchaseForm" (ngSubmit)="register()">
+
+            <table class="table table-bordered bg-light  ">
+                <input class="form-control" type="hidden" formControlName="bookId" required>
+                <input class="form-control" type="hidden" formControlName="quantity" required>
+                <tr>
+                    <td>
+                        <div>
+                            <label><b> Enter Name </b></label>
+                            <input class="form-control " type="text " placeholder="Enter Your Name " formControlName="userName" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <label><b> Phone Number </b></label>
+                                <input class="form-control " type="number " placeholder="Enter Your Phone Number " formControlName="phoneNo" required>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div>
+                                <label> <b>Enter Address : </b></label>
+                                <input class="form-control " type="text " placeholder="Enter Your Address " formControlName="address" required>
+                            </div>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <th>Book Name : {{book.bookName}}</th>
+                    </tr>
+                    <tr>
+                        <th>Author : {{book.author}}</th>
+                    </tr>
+                    <tr>
+                        <th>Price : &#x20b9;{{book.price}}</th>
+                    </tr>
+                    <tr>
+                        <td> <button type="submit " class="btn btn-primary btn-lg btn-block ">Place Order</button>
+                            <button type="submit " [routerLink]="[ '/'] " class="btn btn-danger btn-lg btn-block ">Cancle Order</button>
+                        </td>
+                    </tr>
+            </table>
+        </form>
+    </div>
+</div>
